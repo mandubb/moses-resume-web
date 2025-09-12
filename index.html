@@ -18,7 +18,9 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-gradient-to-br from-gray-800 to-gray-900 text-gray-200">
+<body class="bg-gradient-to-br from-gray-900 to-gray-950 text-gray-200 overflow-x-hidden">
+    <!-- Background Animation Canvas -->
+    <canvas id="bgCanvas" class="fixed top-0 left-0 w-full h-full z-0 opacity-30"></canvas>
     <!-- Navigation -->
     <nav class="bg-gray-900/80 backdrop-blur-md shadow-lg fixed w-full z-50 transition-all duration-300">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
@@ -32,6 +34,7 @@
                 <li><a href="#languages" class="hover:text-teal-400 transition-colors duration-300">Languages</a></li>
                 <li><a href="#publications" class="hover:text-teal-400 transition-colors duration-300">Publications</a></li>
                 <li><a href="#contact" class="hover:text-teal-400 transition-colors duration-300">Contact</a></li>
+                <li><a href="#projects" class="hover:text-teal-400 transition-colors duration-300">Projects</a></li>
             </ul>
             <button id="mobile-toggle" class="md:hidden text-teal-400"><i class="fas fa-bars text-2xl"></i></button>
         </div>
@@ -45,12 +48,13 @@
                 <li><a href="#languages" class="block py-2 hover:text-teal-400">Languages</a></li>
                 <li><a href="#publications" class="block py-2 hover:text-teal-400">Publications</a></li>
                 <li><a href="#contact" class="block py-2 hover:text-teal-400">Contact</a></li>
+                <li><a href="#projects" class="block py-2 hover:text-teal-400">Projects</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- Hero Section with Typing Effect -->
-    <section id="hero" class="relative bg-gradient-to-r from-teal-900 via-cyan-900 to-gray-900 text-gray-100 pt-28 pb-20 overflow-hidden">
+    <section id="hero" class="relative bg-gradient-to-r from-teal-900 via-cyan-900 to-gray-950 text-gray-100 pt-28 pb-20 overflow-hidden">
         <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
         <div class="container mx-auto px-4 text-center relative z-10" data-aos="fade-up">
             <h1 class="text-6xl md:text-7xl font-bold mb-4 animate-pulse">Moses Kamanu Mathu</h1>
@@ -59,6 +63,7 @@
             <div class="flex justify-center space-x-4">
                 <a href="https://linkedin.com/in/mathusays10" target="_blank" class="bg-teal-800/50 backdrop-blur-sm text-gray-100 px-6 py-3 rounded-full hover:bg-teal-700/70 transition-all duration-300 border border-teal-600/50"><i class="fab fa-linkedin mr-2"></i>LinkedIn</a>
                 <a href="https://mmathu.substack.com" target="_blank" class="bg-teal-800/50 backdrop-blur-sm text-gray-100 px-6 py-3 rounded-full hover:bg-teal-700/70 transition-all duration-300 border border-teal-600/50"><i class="fas fa-blog mr-2"></i>Substack</a>
+                <a href="#download" class="bg-teal-800/50 backdrop-blur-sm text-gray-100 px-6 py-3 rounded-full hover:bg-teal-700/70 transition-all duration-300 border border-teal-600/50"><i class="fas fa-download mr-2"></i>Download CV</a>
             </div>
         </div>
     </section>
@@ -117,7 +122,7 @@
                     <div class="timeline-item flex flex-col md:flex-row items-center gap-6" data-anime="timeline">
                         <div class="flex-1 p-6 bg-gray-800/70 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-700/50">
                             <h3 class="text-2xl font-semibold mb-2">Freelance Translator & Writer</h3>
-                            <p class="text-gray-400 mb-4">Upwork, Clearly Local, Global Listings | 2020 – 2024 | Remote</p>
+                            <p class="text-gray-400 mb-4">Upwork, Clearly Local, Global Listings | Jan 2020 – Dec 2024 | Remote</p>
                             <ul class="space-y-2">
                                 <li class="flex items-center"><i class="fas fa-check text-teal-400 mr-2"></i>Completed 70,000+ word translations (English-Kikuyu, Swahili) on tight deadlines</li>
                                 <li class="flex items-center"><i class="fas fa-check text-teal-400 mr-2"></i>Delivered creative copywriting, blog content, and research summaries for international clients</li>
@@ -298,6 +303,25 @@
                     <h3 class="text-2xl font-semibold mb-2">"Evolution of the African Voter"</h3>
                     <p class="text-gray-400 mb-4">Personal Blog</p>
                     <a href="https://mmathu.substack.com" target="_blank" class="text-teal-400 hover:underline">mmathu.substack.com</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="bg-gray-900/50 py-20">
+        <div class="container mx-auto px-4" data-aos="fade-up">
+            <h2 class="section-title text-center">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <div class="p-6 bg-gray-800/70 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-700/50">
+                    <h3 class="text-2xl font-semibold mb-2">Multilingual AI Training Dataset</h3>
+                    <p class="text-gray-400 mb-4">2024 | Contributed to a dataset enhancing AI language models for Swahili and Kikuyu.</p>
+                    <a href="#" class="text-teal-400 hover:underline">View Details</a>
+                </div>
+                <div class="p-6 bg-gray-800/70 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-700/50">
+                    <h3 class="text-2xl font-semibold mb-2">Translation Workflow Automation</h3>
+                    <p class="text-gray-400 mb-4">2023 | Developed a script to streamline translation tasks, saving 20% time.</p>
+                    <a href="#" class="text-teal-400 hover:underline">View Details</a>
                 </div>
             </div>
         </div>

@@ -3,6 +3,7 @@
 
 body {
     font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
 }
 
 .section-title {
@@ -50,8 +51,6 @@ body {
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
 }
-
-.gold-500 { color: #FFD700; }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
