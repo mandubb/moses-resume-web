@@ -1,0 +1,98 @@
+/* Custom styles for the enhanced resume website */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.section-title {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    color: #1f2937;
+    background: linear-gradient(to right, #14b8a6, #2dd4bf);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.timeline-item {
+    position: relative;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -1rem;
+    top: 0;
+    width: 2rem;
+    height: 2rem;
+    background: linear-gradient(to right, rgb(20 184 166), rgb(45 212 191));
+    border-radius: 9999px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    z-index: 10;
+}
+
+.skill-card {
+    cursor: pointer;
+}
+
+.progress-bar {
+    transition: width 2s ease-in-out;
+}
+
+.animate-spin-slow {
+    animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.gold-500 { color: #FFD700; }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .timeline-item::before {
+        left: -0.5rem;
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    #hero h1 {
+        font-size: 1.875rem;
+        line-height: 2.25rem;
+    }
+    
+    #hero p {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+    }
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Glassmorphism effects */
+.backdrop-blur-sm {
+    backdrop-filter: blur(10px);
+}
+
+/* Form focus */
+form input, form textarea {
+    transition: all 0.3s;
+}
+
+/* Hover scales */
+.hover\:scale-105:hover {
+    transform: scale(1.05);
+}

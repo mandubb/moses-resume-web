@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moses Kamanu Mathu - Multilingual Content Specialist</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- AOS CDN for animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Anime.js for advanced animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <!-- Typed.js for typing effect -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gradient-to-br from-gray-800 to-gray-900 text-gray-200">
+    <!-- Navigation -->
+    <nav class="bg-gray-900/80 backdrop-blur-md shadow-lg fixed w-full z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold bg-gradient-to-r from-teal-500 to-cyan-700 bg-clip-text text-transparent">Moses Mathu</a>
+            <ul class="hidden md:flex space-x-8">
+                <li><a href="#about" class="hover:text-teal-400 transition-colors duration-300">About</a></li>
+                <li><a href="#experience" class="hover:text-teal-400 transition-colors duration-300">Experience</a></li>
+                <li><a href="#education" class="hover:text-teal-400 transition-colors duration-300">Education</a></li>
+                <li><a href="#skills" class="hover:text-teal-400 transition-colors duration-300">Skills</a></li>
+                <li><a href="#certifications" class="hover:text-teal-400 transition-colors duration-300">Certifications</a></li>
+                <li><a href="#languages" class="hover:text-teal-400 transition-colors duration-300">Languages</a></li>
+                <li><a href="#publications" class="hover:text-teal-400 transition-colors duration-300">Publications</a></li>
+                <li><a href="#contact" class="hover:text-teal-400 transition-colors duration-300">Contact</a></li>
+            </ul>
+            <button id="mobile-toggle" class="md:hidden text-teal-400"><i class="fas fa-bars text-2xl"></i></button>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden bg-gray-900 shadow-md">
+            <ul class="px-4 py-2 space-y-2">
+                <li><a href="#about" class="block py-2 hover:text-teal-400">About</a></li>
+                <li><a href="#experience" class="block py-2 hover:text-teal-400">Experience</a></li>
+                <li><a href="#education" class="block py-2 hover:text-teal-400">Education</a></li>
+                <li><a href="#skills" class="block py-2 hover:text-teal-400">Skills</a></li>
+                <li><a href="#certifications" class="block py-2 hover:text-teal-400">Certifications</a></li>
+                <li><a href="#languages" class="block py-2 hover:text-teal-400">Languages</a></li>
+                <li><a href="#publications" class="block py-2 hover:text-teal-400">Publications</a></li>
+                <li><a href="#contact" class="block py-2 hover:text-teal-400">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Typing Effect -->
+    <section id="hero" class="relative bg-gradient-to-r from-teal-900 via-cyan-900 to-gray-900 text-gray-100 pt-28 pb-20 overflow-hidden">
+        <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+        <div class="container mx-auto px-4 text-center relative z-10" data-aos="fade-up">
+            <h1 class="text-6xl md:text-7xl font-bold mb-4 animate-pulse">Moses Kamanu Mathu</h1>
+            <p class="text-2xl mb-6">Multilingual Content & <span id="typed"></span></p>
+            <p class="max-w-3xl mx-auto mb-8 text-lg leading-relaxed">Multilingual content and research specialist with a background in public administration, translation, and AI training. Skilled in high-accuracy writing, policy interpretation, and intercultural communication. Proven success in freelance and team-based environments, delivering consistent, deadline-driven output across sectors.</p>
+            <div class="flex justify-center space-x-4">
+                <a href="https://linkedin.com/in/mathusays10" target="_blank" class="bg-teal-800/50 backdrop-blur-sm text-gray-100 px-6 py-3 rounded-full hover:bg-teal-700/70 transition-all duration-300 border border-teal-600/50"><i class="fab fa-linkedin mr-2"></i>LinkedIn</a>
+                <a href="https://mmathu.substack.com" target="_blank" class="bg-teal-800/50 backdrop-blur-sm text-gray-100 px-6 py-3 rounded-full hover:bg-teal-700/70 transition-all duration-300 border border-teal-600/50"><i class="fas fa-blog mr-2"></i>Substack</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20">
+        <div class="container mx-auto px-4" data-aos="fade-up">
+            <h2 class="section-title text-center">About Me</h2>
+            <div class="max-w-4xl mx-auto text-center">
+                <p class="text-lg leading-relaxed">As a multilingual professional based in Kiambu County, Kenya, I bring a unique blend of skills in content creation, AI training, and public administration. My passion for languages and technology drives me to deliver high-quality, culturally sensitive work that bridges global audiences. Let's connect to explore collaborative opportunities!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section with Interactive Timeline -->
+    <section id="experience" class="bg-gray-900/50 py-20">
+        <div class="container mx-auto px-4" data-aos="fade-up">
+            <h2 class="section-title text-center">Professional Experience</h2>
+            <div class="relative max-w-4xl mx-auto">
+                <div class="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-teal-500 to-cyan-700"></div>
+                <div class="space-y-12">
+                    <div class="timeline-item flex flex-col md:flex-row items-center md:odd:flex-row-reverse gap-6" data-anime="timeline">
+                        <div class="flex-1 p-6 bg-gray-800/70 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-700/50">
+                            <h3 class="text-2xl font-semibold mb-2">Remote Content Writer/Editor</h3>
+                            <p class="text-gray-400 mb-4">Klarecon Writers | Jan 2025 – Present | Remote</p>
+                            <ul class="space-y-2">
+                                <li class="flex items-center"><i class="fas fa-check text-teal-400 mr-2"></i>Deliver SEO-optimized content under tight deadlines for global audiences</li>
+                                <li class="flex items-center"><i class="fas fa-check text-teal-400 mr-2"></i>Maintain accuracy, tone, and editorial consistency across diverse topics</li>
+                                <li class="flex items-center"><i class="fas fa-check text-teal-400 mr-2"></i>Collaborate remotely with global teams to meet client expectations</li>
+                            </ul>
+                        </div>
+                        <div class="w-16 h-16 bg-gradient-to-r from-teal-500 to-cyan-700 rounded-full flex items-center justify-center text-white font-bold text-xl animate-bounce">2025</div>
+                    </div>
+                    <div class="timeline-item flex flex-col md:flex-row items-center gap-6" data-anime="timeline">
+                        <div class="flex-1 p-6 bg-gray-800/70 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-700/50">
+                            <h3 class="text-2xl font-semibold mb-2">AI QA Tester & Translator (Swahili/English)</h3>
+                            <p class="text-gray-400 mb-4">Translated | Jul 2024 – Nov 2024 | Remote</p>
+                            <ul class="space-y-2">
+                                <li class="flex items-center"><i class="fas fa-check text-teal-400 mr-2"></i>Evaluated AI-generated Swahili content for accuracy and cultural context</li>
+                                <li class="flex items-center"><i class="fas fa-check text-teal-400 mr-2"></i>Rated multilingual output for quality and relevance to user queries</li>
+                            </ul>
+                        </div>
+                        <div class="w-16 h-16 bg-gradient-to-r from-teal-500 to-cyan-700 rounded-full flex items-center justify-center text-white font-bold text-xl animate-bounce">2024</div>
+                    </div>
+                    <div class="timeline-item flex flex-col md:flex-row items-center md:odd:flex-row-reverse gap-6" data-anime="timeline">
+                        <div class="flex-1 p-6 bg-gray-800/70 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-700/50">
+                            <h3 class="text-2xl font-semibold mb-2">Data Labeler & Prompt Trainer</h3>
+                            <p class="text-gray-400 mb-4">Sapien & Outlier | Dec 2023 – Nov 2024 | Remote</p>
+                            <ul class="space-y-2">
+                                <li class="flex items-center"><i class="fas fa-check text-teal-400 mr-2"></i>Labeled large datasets and trained generative AI on Swahili, Kikuyu, and English tasks</li>
+                                <li class="flex items-center"><i class="fas fa-check text-teal-400 mr-2"></i>Ensured quality control, data integrity, and ethical handling of project material</li>
+                            </ul>
+                        </div>
+                        <div class="w-16 h-16 bg-gradient-to-r from-teal-500 to-cyan-700 rounded-full flex items-center justify-center text-white font-bold text-xl animate-bounce">2023-24</div>
+                    </div>
+                    <div class="timeline-item flex flex-col md:flex-row items-center gap-6" data-anime="timeline">
+                        <div class="flex-1 p-6 bg-gray-800/70 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-700/50">
+                            <h3 class="text-2xl font-semibold mb-2">Freelance Translator & Writer</h3>
+                            <p class="text-gray-400 mb-4">Upwork, Clearly Local, Global Listings | 2020 – 2024 | Remote</p>
+                            <ul class="space-y-2">
+                                <li class="flex items-center"><i class="fas fa-check text-teal-400 mr-2"></i>Completed 70,000+ word translations (English-Kikuyu, Swahili) on tight deadlines</li>
+                                <li class="flex items-center"><i class="fas fa-check text-teal-400 mr-2"></i>Delivered creative copywriting, blog content, and research summaries for international clients</li>
+                            </ul>
+                        </div>
+                        <div class="w-16 h-16 bg-gradient-to-r from-teal-500 to-cyan-700 rounded-full flex items-center justify-center text-white font-bold text-xl animate-bounce">2020-24</div>
+                    </div>
+                    <div class="timeline-item flex flex-col md:flex-row items-center md:odd:flex-row-reverse gap-6" data-anime="timeline">
+                        <div class="flex-1 p-6 bg-gray-800/70 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-700/50">
+                            <h3 class="text-2xl font-semibold mb-2">Public Administration Intern</h3>
+                            <p class="text-gray-400 mb-4">Ministry of Interior and Coordination – Lari Sub-County | Jun 2023 – Oct 2023 | Kimende, Kenya</p>
+                            <ul class="space-y-2">
+                                <li class="flex items-center"><i class="fas fa-check text-teal-400 mr-2"></i>Supported case file reviews and citizen services</li>
+                                <li class="flex items-center"><i class="fas fa-check text-teal-400 mr-2"></i>Compiled internal reports and provided frontline documentation support</li>
+                            </ul>
+                        </div>
+                        <div class="w-16 h-16 bg-gradient-to-r from-teal-500 to-cyan-700 rounded-full flex items-center justify-center text-white font-bold text-xl animate-bounce">2023</div>
+                    </div>
+                    <div class="timeline-item flex flex-col md:flex-row items-center gap-6" data-anime="timeline">
+                        <div class="flex-1 p-6 bg-gray-800/70 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-700/50">
+                            <h3 class="text-2xl font-semibold mb-2">Volunteer Trainer</h3>
+                            <p class="text-gray-400 mb-4">Lari ICT Hub | Jan 2024 – Dec 2024 | Kiambu County, Kenya</p>
+                            <ul class="space-y-2">
+                                <li class="flex items-center"><i class="fas fa-check text-teal-400 mr-2"></i>Facilitated basic digital literacy and computer skills training for community members</li>
+                                <li class="flex items-center"><i class="fas fa-check text-teal-400 mr-2"></i>Helped learners develop confidence using office applications and accessing online resources</li>
+                            </ul>
+                        </div>
+                        <div class="w-16 h-16 bg-gradient-to-r from-teal-500 to-cyan-700 rounded-full flex items-center justify-center text-white font-bold text-xl animate-bounce">2024</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section with Cards -->
+    <section id="education" class="py-20">
+        <div class="container mx-auto px-4" data-aos="fade-up">
+            <h2 class="section-title text-center">Education</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="p-6 bg-gray-800/70 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-700/50" data-aos="zoom-in">
+                    <h3 class="text-xl font-semibold mb-2">Bachelor of Arts in Political Science and Public Administration</h3>
+                    <p class="text-gray-400">University of Nairobi | Jan 2020 – Dec 2024</p>
+                </div>
+                <div class="p-6 bg-gray-800/70 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-700/50" data-aos="zoom-in" data-aos-delay="100">
+                    <h3 class="text-xl font-semibold mb-2">AI Career Essentials Certificate</h3>
+                    <p class="text-gray-400">ALX Academy | May 2024 – Jul 2024</p>
+                </div>
+                <div class="p-6 bg-gray-800/70 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-700/50" data-aos="zoom-in" data-aos-delay="200">
+                    <h3 class="text-xl font-semibold mb-2">AI Fundamentals Certificate</h3>
+                    <p class="text-gray-400">DataCamp | Oct 2024 – Nov 2024</p>
+                </div>
+                <div class="p-6 bg-gray-800/70 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-700/50" data-aos="zoom-in" data-aos-delay="300">
+                    <h3 class="text-xl font-semibold mb-2">Certificate in Computer Applications</h3>
+                    <p class="text-gray-400">Kiambu Computer College | May 2019 – Aug 2019</p>
+                </div>
+                <div class="p-6 bg-gray-800/70 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-700/50" data-aos="zoom-in" data-aos-delay="400">
+                    <h3 class="text-xl font-semibold mb-2">High School Diploma</h3>
+                    <p class="text-gray-400">Bathi Secondary School | Jan 2015 – Nov 2018</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section with Animated Progress Bars -->
+    <section id="skills" class="bg-gray-900/50 py-20">
+        <div class="container mx-auto px-4" data-aos="fade-up">
+            <h2 class="section-title text-center">Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="skill-card p-6 bg-gradient-to-br from-gray-700 to-teal-900 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-teal-800/50" data-progress="95">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-pencil-alt text-teal-400 mr-3 text-3xl animate-spin-slow"></i>
+                        <h3 class="text-xl font-semibold">Professional Writing & Editing</h3>
+                    </div>
+                    <div class="w-full bg-gray-600 rounded-full h-3">
+                        <div class="bg-gradient-to-r from-teal-500 to-cyan-600 h-3 rounded-full progress-bar" style="width: 0%"></div>
+                    </div>
+                    <p class="text-sm text-gray-400 mt-2">(English, Swahili, Kikuyu)</p>
+                </div>
+                <div class="skill-card p-6 bg-gradient-to-br from-gray-700 to-teal-900 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-teal-800/50" data-progress="90">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-search text-teal-400 mr-3 text-3xl animate-pulse"></i>
+                        <h3 class="text-xl font-semibold">Research & Analytical Thinking</h3>
+                    </div>
+                    <div class="w-full bg-gray-600 rounded-full h-3">
+                        <div class="bg-gradient-to-r from-teal-500 to-cyan-600 h-3 rounded-full progress-bar" style="width: 0%"></div>
+                    </div>
+                </div>
+                <div class="skill-card p-6 bg-gradient-to-br from-gray-700 to-teal-900 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-teal-800/50" data-progress="85">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-robot text-teal-400 mr-3 text-3xl animate-bounce"></i>
+                        <h3 class="text-xl font-semibold">AI Training & Prompt Engineering</h3>
+                    </div>
+                    <div class="w-full bg-gray-600 rounded-full h-3">
+                        <div class="bg-gradient-to-r from-teal-500 to-cyan-600 h-3 rounded-full progress-bar" style="width: 0%"></div>
+                    </div>
+                </div>
+                <div class="skill-card p-6 bg-gradient-to-br from-gray-700 to-teal-900 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-teal-800/50" data-progress="88">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-comments text-teal-400 mr-3 text-3xl animate-spin-slow"></i>
+                        <h3 class="text-xl font-semibold">Public Communication & Case Documentation</h3>
+                    </div>
+                    <div class="w-full bg-gray-600 rounded-full h-3">
+                        <div class="bg-gradient-to-r from-teal-500 to-cyan-600 h-3 rounded-full progress-bar" style="width: 0%"></div>
+                    </div>
+                </div>
+                <div class="skill-card p-6 bg-gradient-to-br from-gray-700 to-teal-900 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-teal-800/50" data-progress="92">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-language text-teal-400 mr-3 text-3xl animate-pulse"></i>
+                        <h3 class="text-xl font-semibold">Translation & Localization</h3>
+                    </div>
+                    <div class="w-full bg-gray-600 rounded-full h-3">
+                        <div class="bg-gradient-to-r from-teal-500 to-cyan-600 h-3 rounded-full progress-bar" style="width: 0%"></div>
+                    </div>
+                </div>
+                <div class="skill-card p-6 bg-gradient-to-br from-gray-700 to-teal-900 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-teal-800/50" data-progress="90">
+                    <div class="flex items-center mb-4">
+                        <i class="fab fa-microsoft text-teal-400 mr-3 text-3xl animate-bounce"></i>
+                        <h3 class="text-xl font-semibold">Microsoft Office & Collaboration Tools</h3>
+                    </div>
+                    <div class="w-full bg-gray-600 rounded-full h-3">
+                        <div class="bg-gradient-to-r from-teal-500 to-cyan-600 h-3 rounded-full progress-bar" style="width: 0%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-20">
+        <div class="container mx-auto px-4" data-aos="fade-up">
+            <h2 class="section-title text-center">Certifications</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+                <ul class="space-y-3 list-none">
+                    <li class="flex items-center p-4 bg-gray-800/70 backdrop-blur-sm rounded-xl shadow hover:shadow-lg transition-all duration-300"><i class="fas fa-certificate text-yellow-500 mr-3"></i>EF SET English Certificate (C2 Proficient)</li>
+                    <li class="flex items-center p-4 bg-gray-800/70 backdrop-blur-sm rounded-xl shadow hover:shadow-lg transition-all duration-300"><i class="fas fa-certificate text-yellow-500 mr-3"></i>Writing with Flair: LinkedIn Learning</li>
+                    <li class="flex items-center p-4 bg-gray-800/70 backdrop-blur-sm rounded-xl shadow hover:shadow-lg transition-all duration-300"><i class="fas fa-certificate text-yellow-500 mr-3"></i>Writing in Plain Language: LinkedIn Learning</li>
+                </ul>
+                <ul class="space-y-3 list-none">
+                    <li class="flex items-center p-4 bg-gray-800/70 backdrop-blur-sm rounded-xl shadow hover:shadow-lg transition-all duration-300"><i class="fas fa-certificate text-yellow-500 mr-3"></i>Writing a Resume: LinkedIn Learning</li>
+                    <li class="flex items-center p-4 bg-gray-800/70 backdrop-blur-sm rounded-xl shadow hover:shadow-lg transition-all duration-300"><i class="fas fa-certificate text-yellow-500 mr-3"></i>Premiere Pro 2020 Essentials: LinkedIn Learning</li>
+                    <li class="flex items-center p-4 bg-gray-800/70 backdrop-blur-sm rounded-xl shadow hover:shadow-lg transition-all duration-300"><i class="fas fa-certificate text-yellow-500 mr-3"></i>Constructive Journalism Certificate</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Languages Section with Flags -->
+    <section id="languages" class="bg-gray-900/50 py-20">
+        <div class="container mx-auto px-4" data-aos="fade-up">
+            <h2 class="section-title text-center">Languages</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto">
+                <div class="text-center p-6 bg-gradient-to-br from-gray-700 to-teal-900 rounded-2xl shadow-lg hover:scale-105 transition-all duration-300">
+                    <span class="text-5xl mb-2">🇬🇧</span>
+                    <h3 class="text-xl font-semibold">English</h3>
+                    <p class="text-gray-400">Full Professional Proficiency</p>
+                </div>
+                <div class="text-center p-6 bg-gradient-to-br from-gray-700 to-teal-900 rounded-2xl shadow-lg hover:scale-105 transition-all duration-300">
+                    <span class="text-5xl mb-2">🇹🇿</span>
+                    <h3 class="text-xl font-semibold">Swahili</h3>
+                    <p class="text-gray-400">Native</p>
+                </div>
+                <div class="text-center p-6 bg-gradient-to-br from-gray-700 to-teal-900 rounded-2xl shadow-lg hover:scale-105 transition-all duration-300">
+                    <span class="text-5xl mb-2">🇰🇪</span>
+                    <h3 class="text-xl font-semibold">Kikuyu</h3>
+                    <p class="text-gray-400">Native</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="py-20">
+        <div class="container mx-auto px-4" data-aos="fade-up">
+            <h2 class="section-title text-center">Publications</h2>
+            <div class="max-w-2xl mx-auto text-center">
+                <div class="p-8 bg-gray-800/70 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                    <i class="fas fa-book text-4xl text-teal-400 mb-4"></i>
+                    <h3 class="text-2xl font-semibold mb-2">"Evolution of the African Voter"</h3>
+                    <p class="text-gray-400 mb-4">Personal Blog</p>
+                    <a href="https://mmathu.substack.com" target="_blank" class="text-teal-400 hover:underline">mmathu.substack.com</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-gray-900/50 py-20">
+        <div class="container mx-auto px-4" data-aos="fade-up">
+            <h2 class="section-title text-center">Get in Touch</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+                <div class="space-y-6">
+                    <div class="flex items-center p-4 bg-teal-900/50 rounded-xl">
+                        <i class="fas fa-map-marker-alt text-teal-400 mr-3 text-xl"></i>
+                        <p>Kiambu County, Kenya</p>
+                    </div>
+                    <div class="flex items-center p-4 bg-teal-900/50 rounded-xl">
+                        <i class="fas fa-phone text-teal-400 mr-3 text-xl"></i>
+                        <p>+254 704 787 573</p>
+                    </div>
+                    <div class="flex items-center p-4 bg-teal-900/50 rounded-xl">
+                        <i class="fas fa-envelope text-teal-400 mr-3 text-xl"></i>
+                        <p>mathumoses@yahoo.com</p>
+                    </div>
+                    <form id="contactForm" class="space-y-4">
+                        <input type="text" id="name" placeholder="Your Name" class="w-full p-4 border border-gray-600 rounded-xl focus:ring-2 focus:ring-teal-500 focus:border-transparent bg-gray-800 text-gray-200" required>
+                        <input type="email" id="email" placeholder="Your Email" class="w-full p-4 border border-gray-600 rounded-xl focus:ring-2 focus:ring-teal-500 focus:border-transparent bg-gray-800 text-gray-200" required>
+                        <textarea id="message" placeholder="Your Message" class="w-full p-4 border border-gray-600 rounded-xl h-32 focus:ring-2 focus:ring-teal-500 focus:border-transparent bg-gray-800 text-gray-200" required></textarea>
+                        <button type="submit" class="w-full bg-gradient-to-r from-teal-500 to-cyan-600 text-gray-200 py-4 rounded-xl hover:from-teal-600 hover:to-cyan-700 transition-all duration-300 font-semibold">Send Message</button>
+                    </form>
+                </div>
+                <div>
+                    <h3 class="text-3xl font-bold mb-6 text-center text-teal-400">Referees</h3>
+                    <div class="space-y-6">
+                        <div class="p-4 bg-teal-900/50 rounded-xl shadow">
+                            <h4 class="font-semibold text-lg">Steve Kamau</h4>
+                            <p class="text-gray-400">Director, Education Is Power (EIP)</p>
+                            <p class="text-sm text-gray-500">+254 723 749 498 | kamaukenvo@yahoo.com</p>
+                        </div>
+                        <div class="p-4 bg-teal-900/50 rounded-xl shadow">
+                            <h4 class="font-semibold text-lg">George Tharao</h4>
+                            <p class="text-gray-400">Supervisor, Lari ICT Hub</p>
+                            <p class="text-sm text-gray-500">+254 724 801 822</p>
+                        </div>
+                        <div class="p-4 bg-teal-900/50 rounded-xl shadow">
+                            <h4 class="font-semibold text-lg">Phillis Ngigi</h4>
+                            <p class="text-gray-400">Human Resource Manager, Lari Subcounty DCC Office</p>
+                            <p class="text-sm text-gray-500">+254 720 991 121 | districter.lari@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-teal-900 to-cyan-900 text-gray-200 py-8 text-center">
+        <p>&copy; 2025 Moses Kamanu Mathu. All rights reserved. Built with passion for global connections.</p>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
