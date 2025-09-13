@@ -8,11 +8,11 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeSkillBars();
     initializeLanguageBars();
     initializeContactForm();
-    initializeThemeToggle();
     initializeBackToTop();
     initializeCounterAnimations();
     initializeParallaxEffects();
     initializeIntersectionObserver();
+    initializeParticles();
     
     console.log('🚀 Portfolio initialized successfully!');
 });
@@ -332,42 +332,6 @@ function isValidEmail(email) {
     return emailRegex.test(email);
 }
 
-// Theme Toggle
-function initializeThemeToggle() {
-    const themeToggle = document.getElementById('theme-toggle');
-    const body = document.body;
-    const icon = themeToggle.querySelector('i');
-    
-    // Check for saved theme preference
-    const savedTheme = localStorage.getItem('theme') || 'dark';
-    if (savedTheme === 'light') {
-        body.classList.add('light-theme');
-        icon.classList.replace('fa-sun', 'fa-moon');
-    }
-    
-    themeToggle.addEventListener('click', () => {
-        body.classList.toggle('light-theme');
-        
-        if (body.classList.contains('light-theme')) {
-            icon.classList.replace('fa-sun', 'fa-moon');
-            localStorage.setItem('theme', 'light');
-        } else {
-            icon.classList.replace('fa-moon', 'fa-sun');
-            localStorage.setItem('theme', 'dark');
-        }
-        
-        // Animate theme transition
-        if (typeof anime !== 'undefined') {
-            anime({
-                targets: body,
-                opacity: [0.8, 1],
-                duration: 300,
-                easing: 'easeInOutQuad'
-            });
-        }
-    });
-}
-
 // Back to Top Button
 function initializeBackToTop() {
     const backToTopBtn = document.getElementById('back-to-top');
@@ -630,6 +594,50 @@ function optimizePerformance() {
         link.href = href;
         document.head.appendChild(link);
     });
+}
+
+// Initialize floating particles
+function initializeParticles() {
+    const particlesContainer = document.createElement('div');
+    particlesContainer.className = 'floating-particles';
+    document.body.appendChild(particlesContainer);
+
+    // Create particles
+    const particleCount = 15;
+    const colors = ['rgba(34, 211, 238, 0.5)', 'rgba(168, 85, 247, 0.5)', 'rgba(16, 185, 129, 0.5)'];
+    
+    for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        
+        // Random size between 4px and 12px
+        const size = Math.random() * 8 + 4;
+        
+        // Random position
+        const posX = Math.random() * 100;
+        const posY = Math.random() * 100;
+        
+        // Random animation delay and duration
+        const delay = Math.random() * 5;
+        const duration = 15 + Math.random() * 15;
+        
+        // Random color
+        const color = colors[Math.floor(Math.random() * colors.length)];
+        
+        // Apply styles
+        Object.assign(particle.style, {
+            width: `${size}px`,
+            height: `${size}px`,
+            background: color,
+            left: `${posX}%`,
+            top: `${posY}%`,
+            animationDelay: `${delay}s`,
+            animationDuration: `${duration}s`,
+            boxShadow: `0 0 ${size * 2}px ${size}px ${color.replace('0.5', '0.2')}`
+        });
+        
+        particlesContainer.appendChild(particle);
+    }
 }
 
 // Error handling
