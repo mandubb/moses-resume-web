@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeLanguageBars();
     initializeBackToTop();
     initializeCounterAnimations();
+    setupEmailButton();
 });
 
 // AOS Initialization
@@ -177,6 +178,27 @@ function animateCounter(el, target) {
         el.textContent = Math.floor(current) + (target.includes('K+') ? 'K+' : '');
         if (current >= num) clearInterval(timer);
     }, 20);
+}
+
+// Email Button
+function setupEmailButton() {
+    // Handle the main Get in Touch button
+    const emailButton = document.querySelector('a[href^="mailto:"]');
+    if (emailButton) {
+        emailButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.open('https://mail.yahoo.com/d/compose?to=mathumoses@yahoo.com', '_blank');
+        });
+    }
+    
+    // Handle the footer email link
+    const footerEmailLink = document.querySelector('.footer-social.email-link');
+    if (footerEmailLink) {
+        footerEmailLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.open('https://mail.yahoo.com/d/compose?to=mathumoses@yahoo.com', '_blank');
+        });
+    }
 }
 
 // Throttle Utility
