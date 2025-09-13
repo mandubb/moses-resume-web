@@ -3,304 +3,231 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moses Kamanu Mathu - Multilingual Content Specialist</title>
-    
-    <!-- Meta tags for SEO -->
-    <meta name="description" content="Moses Kamanu Mathu - Professional multilingual content specialist, AI trainer, and translator specializing in English, Swahili, and Kikuyu.">
-    <meta name="keywords" content="multilingual, content specialist, AI trainer, translator, English, Swahili, Kikuyu, Kenya">
-    <meta name="author" content="Moses Kamanu Mathu">
-    
-    <!-- Open Graph meta tags -->
-    <meta property="og:title" content="Moses Kamanu Mathu - Multilingual Content Specialist">
-    <meta property="og:description" content="Professional multilingual content specialist and AI trainer from Kenya">
-    <meta property="og:type" content="website">
-    
-    <!-- Stylesheets -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    
-    <!-- Tailwind Config -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        'inter': ['Inter', 'sans-serif'],
-                        'mono': ['JetBrains Mono', 'monospace'],
-                    },
-                    animation: {
-                        'float': 'float 6s ease-in-out infinite',
-                        'glow': 'glow 2s ease-in-out infinite alternate',
-                        'slide-up': 'slideUp 0.5s ease-out',
-                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                    }
-                }
-            }
-        }
-    </script>
+    <title>Moses Mathu - Multilingual Content Specialist & AI Trainer</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-slate-100 font-inter leading-relaxed">
+<body class="bg-gray-900 text-gray-100">
     <!-- Scroll Progress Bar -->
-    <div id="scroll-progress" class="fixed top-0 left-0 w-0 h-1 bg-gradient-to-r from-blue-500 to-purple-500 z-50 transition-all duration-300"></div>
-    
+    <div id="scroll-progress"></div>
+
     <!-- Navigation -->
-    <nav id="navbar" class="fixed w-full z-40 transition-all duration-300 py-4">
-        <div class="container mx-auto px-6 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-                Moses Mathu
-            </a>
-            
-            <!-- Desktop Navigation -->
-            <ul class="hidden lg:flex space-x-8">
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#experience" class="nav-link">Experience</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#education" class="nav-link">Education</a></li>
-                <li><a href="#languages" class="nav-link">Languages</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-cyan-400">Moses Mathu</div>
+            <ul class="hidden md:flex space-x-8">
+                <li><a href="#about" class="nav-link"><i class="fas fa-user"></i> About</a></li>
+                <li><a href="#experience" class="nav-link"><i class="fas fa-briefcase"></i> Experience</a></li>
+                <li><a href="#skills" class="nav-link"><i class="fas fa-cogs"></i> Skills</a></li>
+                <li><a href="#education" class="nav-link"><i class="fas fa-graduation-cap"></i> Education</a></li>
+                <li><a href="#languages" class="nav-link"><i class="fas fa-globe"></i> Languages</a></li>
+                <li><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
             </ul>
-            
-            <!-- Mobile Menu Button -->
-            <button id="mobile-toggle" class="lg:hidden p-2 rounded-lg bg-slate-800/50 backdrop-blur-sm border border-slate-700/50">
-                <i class="fas fa-bars text-blue-400"></i>
+            <button id="mobile-toggle" class="md:hidden text-2xl text-blue-400">
+                <i class="fas fa-bars"></i>
             </button>
         </div>
-        
-        <!-- Mobile Navigation -->
-        <div id="mobile-menu" class="lg:hidden fixed inset-0 bg-slate-900/95 backdrop-blur-md transform translate-x-full transition-transform duration-300 z-30">
-            <div class="flex flex-col items-center justify-center h-full space-y-8">
-                <a href="#about" class="mobile-nav-link">About</a>
-                <a href="#experience" class="mobile-nav-link">Experience</a>
-                <a href="#skills" class="mobile-nav-link">Skills</a>
-                <a href="#education" class="mobile-nav-link">Education</a>
-                <a href="#languages" class="mobile-nav-link">Languages</a>
-                <a href="#contact" class="mobile-nav-link">Contact</a>
-            </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden fixed top-0 right-0 h-full w-80 bg-gray-800 transform translate-x-full transition-transform duration-300">
+            <ul class="p-8 space-y-4">
+                <li><a href="#about" class="mobile-nav-link block"><i class="fas fa-user"></i> About</a></li>
+                <li><a href="#experience" class="mobile-nav-link block"><i class="fas fa-briefcase"></i> Experience</a></li>
+                <li><a href="#skills" class="mobile-nav-link block"><i class="fas fa-cogs"></i> Skills</a></li>
+                <li><a href="#education" class="mobile-nav-link block"><i class="fas fa-graduation-cap"></i> Education</a></li>
+                <li><a href="#languages" class="mobile-nav-link block"><i class="fas fa-globe"></i> Languages</a></li>
+                <li><a href="#contact" class="mobile-nav-link block"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <!-- Animated Background -->
-        <div class="absolute inset-0 z-0">
-            <div class="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-purple-500/5 to-slate-900/50"></div>
-            <div class="floating-shapes"></div>
-        </div>
-        
-        <div class="container mx-auto px-6 text-center relative z-10" data-aos="fade-up">
-            <div class="max-w-5xl mx-auto">
-                <!-- Profile Image -->
-                <div class="mb-12" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="w-32 h-32 mx-auto rounded-full bg-gradient-to-r from-blue-400 to-purple-500 p-1">
-                        <div class="w-full h-full rounded-full bg-slate-800 flex items-center justify-center">
-                            <i class="fas fa-user text-4xl text-blue-400"></i>
-                        </div>
-                    </div>
-                </div>
-                
-                <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent leading-tight">
-                    Moses Kamanu Mathu
-                </h1>
-                
-                <div class="text-xl md:text-2xl lg:text-3xl mb-8 text-slate-300 font-medium">
-                    <span class="block">Multilingual Content Specialist & </span>
-                    <span id="typed-text" class="text-blue-400 font-mono"></span>
-                </div>
-                
-                <p class="text-lg md:text-xl leading-relaxed mb-12 max-w-4xl mx-auto text-slate-300 font-light">
-                    Bridging cultures through language, technology, and innovative content creation. 
-                    Specializing in AI training, translation, and cross-cultural communication with 
-                    expertise in English, Swahili, and Kikuyu.
-                </p>
-                
-                <!-- CTA Buttons -->
-                <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6 mb-16">
-                    <a href="#contact" class="btn-primary">
-                        <i class="fas fa-envelope mr-2"></i>
-                        Get In Touch
-                    </a>
-                    <a href="#experience" class="btn-secondary">
-                        <i class="fas fa-briefcase mr-2"></i>
-                        View Work
-                    </a>
-                    <a href="https://linkedin.com/in/mathusays10" target="_blank" class="btn-outline" rel="noopener">
-                        <i class="fab fa-linkedin mr-2"></i>
-                        LinkedIn
-                    </a>
-                </div>
-                
-                <!-- Stats -->
-                <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto" data-aos="fade-up" data-aos-delay="400">
-                    <div class="stat-card">
-                        <div class="text-3xl font-bold text-blue-400 font-mono mb-2">70K+</div>
-                        <div class="text-sm text-slate-400 font-medium">Words Translated</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="text-3xl font-bold text-purple-400 font-mono mb-2">3</div>
-                        <div class="text-sm text-slate-400 font-medium">Languages</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="text-3xl font-bold text-emerald-400 font-mono mb-2">5+</div>
-                        <div class="text-sm text-slate-400 font-medium">Years Experience</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="text-3xl font-bold text-rose-400 font-mono mb-2">100+</div>
-                        <div class="text-sm text-slate-400 font-medium">Projects</div>
-                    </div>
-                </div>
+    <section id="hero" class="min-h-screen flex flex-col items-center justify-center px-4 relative overflow-hidden">
+        <div class="floating-shapes"></div>
+        <div class="geometric-bg"></div>
+        <div class="container mx-auto text-center max-w-5xl z-10 relative">
+            <h1 class="text-5xl md:text-7xl font-bold mb-4 text-white" data-aos="fade-up">Moses Kamanu Mathu</h1>
+            <p class="text-xl md:text-2xl mb-8 text-gray-300">
+                Multilingual Content Specialist & <span id="typed-text"></span>
+            </p>
+            <p class="text-lg md:text-xl mb-8 max-w-3xl mx-auto text-gray-400 leading-relaxed">
+                Bridging cultures through language, technology, and innovative content creation. Specializing in AI training, translation, and cross-cultural communication with expertise in English, Swahili, and Kikuyu.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                <a href="#contact" class="btn-primary"><i class="fas fa-paper-plane mr-2"></i> Get In Touch</a>
+                <a href="#work" class="btn-secondary"><i class="fas fa-eye mr-2"></i> View Work</a>
             </div>
-            
-            <!-- Scroll indicator -->
-            <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-                <a href="#about" class="text-slate-400 hover:text-blue-400 transition-colors duration-300">
-                    <i class="fas fa-chevron-down text-2xl"></i>
-                </a>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+                <div class="stat-card text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-3xl font-bold text-cyan-400 mb-2">70K+</div>
+                    <div class="text-gray-400">Words Translated</div>
+                </div>
+                <div class="stat-card text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-3xl font-bold text-purple-400 mb-2">3</div>
+                    <div class="text-gray-400">Languages</div>
+                </div>
+                <div class="stat-card text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-3xl font-bold text-emerald-400 mb-2">5+</div>
+                    <div class="text-gray-400">Years Experience</div>
+                </div>
+                <div class="stat-card text-center" data-aos="fade-up" data-aos-delay="400">
+                    <div class="text-3xl font-bold text-yellow-400 mb-2">100+</div>
+                    <div class="text-gray-400">Projects</div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 relative">
-        <div class="container mx-auto px-6" data-aos="fade-up">
+    <section id="about" class="py-20 px-4 relative">
+        <div class="section-bg-pattern"></div>
+        <div class="container mx-auto">
             <div class="text-center mb-16">
-                <h2 class="section-title">About Me</h2>
-                <p class="section-subtitle">Discover my journey and passion for multilingual content creation</p>
+                <div class="section-icon-wrapper inline-block mb-6">
+                    <i class="section-icon fas fa-user-circle"></i>
+                </div>
+                <h2 class="section-title" data-aos="fade-up">About Me</h2>
+                <p class="section-subtitle max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">Discover my journey and passion for multilingual content creation</p>
             </div>
-            
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
-                <div class="space-y-8">
-                    <p class="text-lg leading-relaxed text-slate-300">
-                        Based in the vibrant Kiambu County, Kenya, I'm a passionate multilingual professional 
-                        who thrives at the intersection of language, technology, and culture. My journey spans 
-                        from public administration to cutting-edge AI training, always with a focus on 
-                        building bridges between communities and technologies.
-                    </p>
-                    
-                    <p class="text-lg leading-relaxed text-slate-300">
-                        With a deep understanding of Kenyan culture and expertise in English, Swahili, and Kikuyu, 
-                        I specialize in creating content that resonates across linguistic and cultural boundaries. 
-                        My work in AI training and prompt engineering positions me at the forefront of how 
-                        artificial intelligence can better serve diverse, multilingual communities.
-                    </p>
-                    
-                    <!-- Key Highlights -->
-                    <div class="grid grid-cols-2 gap-6 mt-12">
-                        <div class="highlight-card">
-                            <i class="fas fa-globe-africa text-blue-400 text-3xl mb-4"></i>
-                            <h4 class="font-semibold text-lg mb-2 text-white">Cultural Bridge</h4>
-                            <p class="text-slate-400">Connecting global and local perspectives</p>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <img src="https://via.placeholder.com/500x600?text=Profile+Photo" alt="Moses Mathu" class="rounded-2xl shadow-2xl w-full">
+                </div>
+                <div data-aos="fade-left">
+                    <p class="text-lg leading-relaxed mb-6">Based in the vibrant Kiambu County, Kenya, I'm a passionate multilingual professional who thrives at the intersection of language, technology, and culture. My journey spans from public administration to cutting-edge AI training, always with a focus on building bridges between communities and technologies.</p>
+                    <p class="text-lg leading-relaxed mb-8">With a deep understanding of Kenyan culture and expertise in English, Swahili, and Kikuyu, I specialize in creating content that resonates across linguistic and cultural boundaries. My work in AI training and prompt engineering positions me at the forefront of how artificial intelligence can better serve diverse, multilingual communities.</p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="highlight-card p-6 text-center">
+                            <i class="fas fa-bridge text-2xl text-cyan-400 mb-2"></i>
+                            <h4 class="font-bold">Cultural Bridge</h4>
+                            <p class="text-sm text-gray-400">Connecting global and local perspectives</p>
                         </div>
-                        <div class="highlight-card">
-                            <i class="fas fa-robot text-purple-400 text-3xl mb-4"></i>
-                            <h4 class="font-semibold text-lg mb-2 text-white">AI Pioneer</h4>
-                            <p class="text-slate-400">Training next-generation AI systems</p>
+                        <div class="highlight-card p-6 text-center">
+                            <i class="fas fa-robot text-2xl text-purple-400 mb-2"></i>
+                            <h4 class="font-bold">AI Pioneer</h4>
+                            <p class="text-sm text-gray-400">Training next-generation AI systems</p>
                         </div>
-                        <div class="highlight-card">
-                            <i class="fas fa-language text-emerald-400 text-3xl mb-4"></i>
-                            <h4 class="font-semibold text-lg mb-2 text-white">Language Expert</h4>
-                            <p class="text-slate-400">Native fluency in 3 languages</p>
+                        <div class="highlight-card p-6 text-center">
+                            <i class="fas fa-language text-2xl text-emerald-400 mb-2"></i>
+                            <h4 class="font-bold">Language Expert</h4>
+                            <p class="text-sm text-gray-400">Native fluency in 3 languages</p>
                         </div>
-                        <div class="highlight-card">
-                            <i class="fas fa-pen-fancy text-rose-400 text-3xl mb-4"></i>
-                            <h4 class="font-semibold text-lg mb-2 text-white">Content Creator</h4>
-                            <p class="text-slate-400">Crafting compelling narratives</p>
+                        <div class="highlight-card p-6 text-center">
+                            <i class="fas fa-pen-fancy text-2xl text-yellow-400 mb-2"></i>
+                            <h4 class="font-bold">Content Creator</h4>
+                            <p class="text-sm text-gray-400">Crafting compelling narratives</p>
                         </div>
                     </div>
                 </div>
-                
-                <div class="relative" data-aos="fade-left" data-aos-delay="200">
-                    <div class="bg-gradient-to-br from-blue-500/20 to-purple-500/20 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-8 h-96 flex items-center justify-center">
-                        <div class="text-center">
-                            <i class="fas fa-quote-left text-6xl text-blue-400/30 mb-6"></i>
-                            <blockquote class="text-xl italic text-slate-300 mb-6 leading-relaxed">
-                                "Bridging cultures through the power of language and technology"
-                            </blockquote>
-                            <cite class="text-blue-400 font-medium">- My Mission</cite>
-                        </div>
-                    </div>
-                </div>
+            </div>
+            <div class="text-center mt-12">
+                <blockquote class="text-2xl italic text-gray-300 relative">
+                    <span class="absolute -left-12 top-1/2 transform -translate-y-1/2 text-6xl opacity-20">"</span>
+                    Bridging cultures through the power of language and technology
+                    <span class="absolute -right-12 top-1/2 transform -translate-y-1/2 text-6xl opacity-20">"</span>
+                </blockquote>
+                <p class="text-lg font-semibold text-cyan-400 mt-4">- My Mission</p>
             </div>
         </div>
     </section>
 
-    <!-- Education & Certifications Section -->
-    <section id="education" class="py-20 bg-slate-800/30 relative">
-        <div class="container mx-auto px-6" data-aos="fade-up">
+    <!-- Education Section -->
+    <section id="education" class="py-20 px-4 bg-gray-800 relative">
+        <div class="container mx-auto">
             <div class="text-center mb-16">
-                <h2 class="section-title">Education & Certifications</h2>
-                <p class="section-subtitle">My academic background and professional certifications</p>
+                <div class="section-icon-wrapper inline-block mb-6">
+                    <i class="section-icon fas fa-graduation-cap"></i>
+                </div>
+                <h2 class="section-title" data-aos="fade-up">Education & Certifications</h2>
+                <p class="section-subtitle max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">My academic background and professional certifications</p>
             </div>
-            
-            <div class="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-                <!-- Education -->
-                <div>
-                    <h3 class="text-3xl font-bold mb-8 text-blue-400">Education</h3>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div data-aos="fade-up">
+                    <h3 class="text-2xl font-bold mb-8 text-center">Education</h3>
                     <div class="space-y-6">
-                        <div class="education-card" data-aos="slide-up" data-aos-delay="100">
-                            <div class="education-icon blue">
-                                <i class="fas fa-graduation-cap"></i>
-                            </div>
+                        <div class="education-card">
+                            <div class="education-icon blue"><i class="fas fa-university"></i></div>
                             <div>
-                                <h4 class="font-bold text-xl text-white mb-2">Bachelor of Arts in Political Science and Public Administration</h4>
-                                <p class="text-slate-400 mb-2 font-medium">University of Nairobi</p>
-                                <span class="education-date">Jan 2020 – Dec 2024</span>
+                                <h4 class="font-bold text-xl mb-2">Bachelor of Arts in Political Science and Public Administration</h4>
+                                <p class="text-gray-400 mb-2">University of Nairobi</p>
+                                <span class="education-date">Jan 2020 — Dec 2024</span>
                             </div>
                         </div>
-                        
-                        <div class="education-card" data-aos="slide-up" data-aos-delay="200">
-                            <div class="education-icon purple">
-                                <i class="fas fa-certificate"></i>
-                            </div>
+                        <div class="education-card">
+                            <div class="education-icon purple"><i class="fas fa-laptop"></i></div>
                             <div>
-                                <h4 class="font-bold text-xl text-white mb-2">Certificate in Computer Applications</h4>
-                                <p class="text-slate-400 mb-2 font-medium">Kiambu Computer College</p>
-                                <span class="education-date">May 2019 – Aug 2019</span>
+                                <h4 class="font-bold text-xl mb-2">Certificate in Computer Applications</h4>
+                                <p class="text-gray-400 mb-2">Kiambu Computer College</p>
+                                <span class="education-date">May 2019 — Aug 2019</span>
                             </div>
                         </div>
-                        
-                        <div class="education-card" data-aos="slide-up" data-aos-delay="300">
-                            <div class="education-icon emerald">
-                                <i class="fas fa-school"></i>
-                            </div>
+                        <div class="education-card">
+                            <div class="education-icon emerald"><i class="fas fa-school"></i></div>
                             <div>
-                                <h4 class="font-bold text-xl text-white mb-2">High School Diploma</h4>
-                                <p class="text-slate-400 mb-2 font-medium">Bathi Secondary School</p>
-                                <span class="education-date">Jan 2015 – Nov 2018</span>
+                                <h4 class="font-bold text-xl mb-2">High School Diploma</h4>
+                                <p class="text-gray-400 mb-2">Bathi Secondary School</p>
+                                <span class="education-date">Jan 2015 — Nov 2018</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Certifications -->
-                <div>
-                    <h3 class="text-3xl font-bold mb-8 text-purple-400">Certifications</h3>
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-2xl font-bold mb-8 text-center">Certifications</h3>
                     <div class="space-y-4">
-                        <div class="cert-card" data-aos="slide-up" data-aos-delay="100">
-                            <i class="fas fa-robot text-blue-400 text-xl"></i>
-                            <span class="font-medium">AI Career Essentials Certificate - ALX Academy</span>
+                        <div class="cert-card">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-certificate text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">AI Career Essentials Certificate</h4>
+                                <p class="text-gray-400 text-sm">ALX Academy</p>
+                            </div>
                         </div>
-                        <div class="cert-card" data-aos="slide-up" data-aos-delay="200">
-                            <i class="fas fa-brain text-purple-400 text-xl"></i>
-                            <span class="font-medium">AI Fundamentals Certificate - DataCamp</span>
+                        <div class="cert-card">
+                            <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-certificate text-purple-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">AI Fundamentals Certificate</h4>
+                                <p class="text-gray-400 text-sm">DataCamp</p>
+                            </div>
                         </div>
-                        <div class="cert-card" data-aos="slide-up" data-aos-delay="300">
-                            <i class="fas fa-language text-emerald-400 text-xl"></i>
-                            <span class="font-medium">EF SET English Certificate (C2 Proficient)</span>
+                        <div class="cert-card">
+                            <div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-certificate text-emerald-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">EF SET English Certificate (C2 Proficient)</h4>
+                                <p class="text-gray-400 text-sm">EF Education First</p>
+                            </div>
                         </div>
-                        <div class="cert-card" data-aos="slide-up" data-aos-delay="400">
-                            <i class="fas fa-pen text-rose-400 text-xl"></i>
-                            <span class="font-medium">Writing with Flair - LinkedIn Learning</span>
+                        <div class="cert-card">
+                            <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-certificate text-yellow-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Writing with Flair</h4>
+                                <p class="text-gray-400 text-sm">LinkedIn Learning</p>
+                            </div>
                         </div>
-                        <div class="cert-card" data-aos="slide-up" data-aos-delay="500">
-                            <i class="fas fa-file-alt text-indigo-400 text-xl"></i>
-                            <span class="font-medium">Writing in Plain Language - LinkedIn Learning</span>
+                        <div class="cert-card">
+                            <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-certificate text-indigo-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Writing in Plain Language</h4>
+                                <p class="text-gray-400 text-sm">LinkedIn Learning</p>
+                            </div>
                         </div>
-                        <div class="cert-card" data-aos="slide-up" data-aos-delay="600">
-                            <i class="fas fa-video text-yellow-400 text-xl"></i>
-                            <span class="font-medium">Premiere Pro 2020 Essentials - LinkedIn Learning</span>
+                        <div class="cert-card">
+                            <div class="w-12 h-12 bg-rose-100 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-certificate text-rose-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Premiere Pro 2020 Essentials</h4>
+                                <p class="text-gray-400 text-sm">LinkedIn Learning</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -309,110 +236,103 @@
     </section>
 
     <!-- Experience Section -->
-    <section id="experience" class="py-20 bg-slate-800/30 relative">
-        <div class="container mx-auto px-6" data-aos="fade-up">
+    <section id="experience" class="py-20 px-4 relative">
+        <div class="container mx-auto">
             <div class="text-center mb-16">
-                <h2 class="section-title">Professional Journey</h2>
-                <p class="section-subtitle">A timeline of my career milestones and achievements</p>
+                <div class="section-icon-wrapper inline-block mb-6">
+                    <i class="section-icon fas fa-briefcase"></i>
+                </div>
+                <h2 class="section-title" data-aos="fade-up">Professional Journey</h2>
+                <p class="section-subtitle max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">A timeline of my career milestones and achievements</p>
             </div>
-            
-            <div class="relative max-w-6xl mx-auto">
-                <!-- Timeline Line -->
-                <div class="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-400 to-purple-500 transform md:-translate-x-0.5"></div>
-                
+            <div class="relative">
+                <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-cyan-500 to-purple-500"></div>
                 <div class="space-y-12">
-                    <!-- Experience Item 1 -->
                     <div class="timeline-item left" data-aos="fade-right">
-                        <div class="timeline-content">
-                            <div class="timeline-marker">
-                                <i class="fas fa-edit text-white"></i>
+                        <div class="timeline-marker">
+                            <i class="fas fa-calendar-alt text-white"></i>
+                        </div>
+                        <div class="timeline-card bg-gray-800 p-6 rounded-2xl ml-auto max-w-md">
+                            <div class="flex justify-between items-start mb-4">
+                                <h3 class="font-bold text-xl">Remote Content Writer/Editor</h3>
+                                <span class="education-date bg-purple-100 text-purple-800">Jan 2025 — Present</span>
                             </div>
-                            <div class="timeline-card">
-                                <span class="timeline-date">Jan 2025 – Present</span>
-                                <h3 class="timeline-title">Remote Content Writer/Editor</h3>
-                                <p class="timeline-company">Klarecon Writers | Remote</p>
-                                <ul class="timeline-list">
-                                    <li>Deliver SEO-optimized content under tight deadlines for global audiences</li>
-                                    <li>Maintain accuracy, tone, and editorial consistency across diverse topics</li>
-                                    <li>Collaborate remotely with international teams to exceed client expectations</li>
-                                </ul>
-                                <div class="timeline-skills">
-                                    <span class="skill-tag blue">SEO Writing</span>
-                                    <span class="skill-tag purple">Content Strategy</span>
-                                    <span class="skill-tag emerald">Remote Collaboration</span>
-                                </div>
+                            <p class="text-gray-400 mb-4">Klarecon Writers | Remote</p>
+                            <ul class="space-y-2 text-sm">
+                                <li>• Deliver SEO-optimized content under tight deadlines for global audiences</li>
+                                <li>• Maintain accuracy, tone, and editorial consistency across diverse topics</li>
+                                <li>• Collaborate remotely with international teams to exceed client expectations</li>
+                            </ul>
+                            <div class="skill-tags mt-4">
+                                <span>SEO Writing</span>
+                                <span>Content Strategy</span>
+                                <span>Remote Collaboration</span>
                             </div>
                         </div>
                     </div>
-                    
-                    <!-- Experience Item 2 -->
                     <div class="timeline-item right" data-aos="fade-left">
-                        <div class="timeline-content">
-                            <div class="timeline-marker">
-                                <i class="fas fa-robot text-white"></i>
+                        <div class="timeline-marker">
+                            <i class="fas fa-calendar-alt text-white"></i>
+                        </div>
+                        <div class="timeline-card bg-gray-800 p-6 rounded-2xl max-w-md">
+                            <div class="flex justify-between items-start mb-4">
+                                <h3 class="font-bold text-xl">AI QA Tester & Translator</h3>
+                                <span class="education-date bg-blue-100 text-blue-800">Jul 2024 — Nov 2024</span>
                             </div>
-                            <div class="timeline-card">
-                                <span class="timeline-date">Jul 2024 – Nov 2024</span>
-                                <h3 class="timeline-title">AI QA Tester & Translator</h3>
-                                <p class="timeline-company">Translated | Remote</p>
-                                <ul class="timeline-list">
-                                    <li>Evaluated AI-generated Swahili content for accuracy and cultural context</li>
-                                    <li>Rated multilingual output for quality and relevance to user queries</li>
-                                    <li>Contributed to improving AI models for African language processing</li>
-                                </ul>
-                                <div class="timeline-skills">
-                                    <span class="skill-tag blue">AI Testing</span>
-                                    <span class="skill-tag purple">Quality Assurance</span>
-                                    <span class="skill-tag emerald">Swahili</span>
-                                </div>
+                            <p class="text-gray-400 mb-4">Translated | Remote</p>
+                            <ul class="space-y-2 text-sm">
+                                <li>• Evaluated AI-generated Swahili content for accuracy and cultural context</li>
+                                <li>• Rated multilingual output for quality and relevance to user queries</li>
+                                <li>• Contributed to improving AI models for African language processing</li>
+                            </ul>
+                            <div class="skill-tags mt-4">
+                                <span>AI Testing</span>
+                                <span>Quality Assurance</span>
+                                <span>Swahili</span>
                             </div>
                         </div>
                     </div>
-                    
-                    <!-- Experience Item 3 -->
                     <div class="timeline-item left" data-aos="fade-right">
-                        <div class="timeline-content">
-                            <div class="timeline-marker">
-                                <i class="fas fa-database text-white"></i>
+                        <div class="timeline-marker">
+                            <i class="fas fa-calendar-alt text-white"></i>
+                        </div>
+                        <div class="timeline-card bg-gray-800 p-6 rounded-2xl ml-auto max-w-md">
+                            <div class="flex justify-between items-start mb-4">
+                                <h3 class="font-bold text-xl">Data Labeler & Prompt Trainer</h3>
+                                <span class="education-date bg-emerald-100 text-emerald-800">Dec 2023 — Nov 2024</span>
                             </div>
-                            <div class="timeline-card">
-                                <span class="timeline-date">Dec 2023 – Nov 2024</span>
-                                <h3 class="timeline-title">Data Labeler & Prompt Trainer</h3>
-                                <p class="timeline-company">Sapien & Outlier | Remote</p>
-                                <ul class="timeline-list">
-                                    <li>Labeled large datasets for AI training in Swahili, Kikuyu, and English</li>
-                                    <li>Ensured quality control and ethical handling of training materials</li>
-                                    <li>Specialized in prompt engineering for multilingual AI systems</li>
-                                </ul>
-                                <div class="timeline-skills">
-                                    <span class="skill-tag blue">Data Labeling</span>
-                                    <span class="skill-tag purple">Prompt Engineering</span>
-                                    <span class="skill-tag emerald">Multilingual AI</span>
-                                </div>
+                            <p class="text-gray-400 mb-4">Sapien & Outlier | Remote</p>
+                            <ul class="space-y-2 text-sm">
+                                <li>• Labeled large datasets for AI training in Swahili, Kikuyu, and English</li>
+                                <li>• Ensured quality control and ethical handling of training materials</li>
+                                <li>• Specialized in prompt engineering for multilingual AI systems</li>
+                            </ul>
+                            <div class="skill-tags mt-4">
+                                <span>Data Labeling</span>
+                                <span>Prompt Engineering</span>
+                                <span>Multilingual AI</span>
                             </div>
                         </div>
                     </div>
-                    
-                    <!-- Experience Item 4 -->
                     <div class="timeline-item right" data-aos="fade-left">
-                        <div class="timeline-content">
-                            <div class="timeline-marker">
-                                <i class="fas fa-language text-white"></i>
+                        <div class="timeline-marker">
+                            <i class="fas fa-calendar-alt text-white"></i>
+                        </div>
+                        <div class="timeline-card bg-gray-800 p-6 rounded-2xl max-w-md">
+                            <div class="flex justify-between items-start mb-4">
+                                <h3 class="font-bold text-xl">Freelance Translator & Writer</h3>
+                                <span class="education-date bg-yellow-100 text-yellow-800">2020 — 2024</span>
                             </div>
-                            <div class="timeline-card">
-                                <span class="timeline-date">2020 – 2024</span>
-                                <h3 class="timeline-title">Freelance Translator & Writer</h3>
-                                <p class="timeline-company">Upwork, Clearly Local, Global Listings | Remote</p>
-                                <ul class="timeline-list">
-                                    <li>Completed 70,000+ word translations with 99% accuracy rate</li>
-                                    <li>Delivered creative copywriting and research summaries for global clients</li>
-                                    <li>Built reputation for meeting tight deadlines and exceeding expectations</li>
-                                </ul>
-                                <div class="timeline-skills">
-                                    <span class="skill-tag blue">Translation</span>
-                                    <span class="skill-tag purple">Copywriting</span>
-                                    <span class="skill-tag emerald">Client Relations</span>
-                                </div>
+                            <p class="text-gray-400 mb-4">Upwork, Clearly Local, Global Listings | Remote</p>
+                            <ul class="space-y-2 text-sm">
+                                <li>• Completed 70,000+ word translations with 99% accuracy rate</li>
+                                <li>• Delivered creative copywriting and research summaries for global clients</li>
+                                <li>• Built reputation for meeting tight deadlines and exceeding expectations</li>
+                            </ul>
+                            <div class="skill-tags mt-4">
+                                <span>Translation</span>
+                                <span>Copywriting</span>
+                                <span>Client Relations</span>
                             </div>
                         </div>
                     </div>
@@ -422,122 +342,119 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="py-20 relative">
-        <div class="container mx-auto px-6" data-aos="fade-up">
+    <section id="skills" class="py-20 px-4 bg-gray-800 relative">
+        <div class="container mx-auto">
             <div class="text-center mb-16">
-                <h2 class="section-title">Core Competencies</h2>
-                <p class="section-subtitle">My expertise across different domains and technologies</p>
+                <div class="section-icon-wrapper inline-block mb-6">
+                    <i class="section-icon fas fa-cogs"></i>
+                </div>
+                <h2 class="section-title" data-aos="fade-up">Core Competencies</h2>
+                <p class="section-subtitle max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">My expertise across different domains and technologies</p>
             </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                <!-- Skill Card 1 -->
-                <div class="skill-card" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="skill-icon blue">
-                        <i class="fas fa-pen-fancy"></i>
-                    </div>
-                    <h3 class="skill-title">Content Creation & Editing</h3>
-                    <p class="skill-description">Professional writing and editing across multiple languages with SEO optimization and cultural sensitivity.</p>
-                    <div class="skill-progress">
-                        <div class="progress-bar blue" data-width="95">
-                            <span class="progress-text">95%</span>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="skill-card" data-aos="fade-up">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-pen-fancy text-3xl text-cyan-400 mr-4"></i>
+                        <div>
+                            <h3 class="font-bold text-xl">Content Creation & Editing</h3>
+                            <p class="text-sm text-gray-400">Professional writing and editing across multiple languages with SEO optimization and cultural sensitivity.</p>
                         </div>
                     </div>
-                    <div class="skill-tags">
+                    <div class="progress-container">
+                        <div class="progress-bar blue" data-width="95"></div>
+                        <span class="progress-text">95%</span>
+                    </div>
+                    <div class="skill-tags mt-4">
                         <span>English</span>
                         <span>Swahili</span>
                         <span>Kikuyu</span>
                     </div>
                 </div>
-                
-                <!-- Skill Card 2 -->
-                <div class="skill-card" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="skill-icon purple">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <h3 class="skill-title">AI Training & Prompt Engineering</h3>
-                    <p class="skill-description">Specialized in training AI models, data labeling, and prompt engineering for multilingual applications.</p>
-                    <div class="skill-progress">
-                        <div class="progress-bar purple" data-width="90">
-                            <span class="progress-text">90%</span>
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-robot text-3xl text-purple-400 mr-4"></i>
+                        <div>
+                            <h3 class="font-bold text-xl">AI Training & Prompt Engineering</h3>
+                            <p class="text-sm text-gray-400">Specialized in training AI models, data labeling, and prompt engineering for multilingual applications.</p>
                         </div>
                     </div>
-                    <div class="skill-tags">
+                    <div class="progress-container">
+                        <div class="progress-bar purple" data-width="90"></div>
+                        <span class="progress-text">90%</span>
+                    </div>
+                    <div class="skill-tags mt-4">
                         <span>Machine Learning</span>
                         <span>Data Science</span>
                         <span>QA Testing</span>
                     </div>
                 </div>
-                
-                <!-- Skill Card 3 -->
-                <div class="skill-card" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="skill-icon emerald">
-                        <i class="fas fa-language"></i>
-                    </div>
-                    <h3 class="skill-title">Translation & Localization</h3>
-                    <p class="skill-description">Expert translation services with cultural adaptation and localization for diverse markets.</p>
-                    <div class="skill-progress">
-                        <div class="progress-bar emerald" data-width="92">
-                            <span class="progress-text">92%</span>
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-language text-3xl text-emerald-400 mr-4"></i>
+                        <div>
+                            <h3 class="font-bold text-xl">Translation & Localization</h3>
+                            <p class="text-sm text-gray-400">Expert translation services with cultural adaptation and localization for diverse markets.</p>
                         </div>
                     </div>
-                    <div class="skill-tags">
+                    <div class="progress-container">
+                        <div class="progress-bar emerald" data-width="92"></div>
+                        <span class="progress-text">92%</span>
+                    </div>
+                    <div class="skill-tags mt-4">
                         <span>Cultural Adaptation</span>
                         <span>Localization</span>
                         <span>CAT Tools</span>
                     </div>
                 </div>
-                
-                <!-- Skill Card 4 -->
-                <div class="skill-card" data-aos="zoom-in" data-aos-delay="400">
-                    <div class="skill-icon rose">
-                        <i class="fas fa-search"></i>
-                    </div>
-                    <h3 class="skill-title">Research & Analysis</h3>
-                    <p class="skill-description">Comprehensive research methodologies with analytical thinking and data-driven insights.</p>
-                    <div class="skill-progress">
-                        <div class="progress-bar rose" data-width="88">
-                            <span class="progress-text">88%</span>
+                <div class="skill-card md:col-span-2" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-search text-3xl text-yellow-400 mr-4"></i>
+                        <div>
+                            <h3 class="font-bold text-xl">Research & Analysis</h3>
+                            <p class="text-sm text-gray-400">Comprehensive research methodologies with analytical thinking and data-driven insights.</p>
                         </div>
                     </div>
-                    <div class="skill-tags">
+                    <div class="progress-container">
+                        <div class="progress-bar yellow" data-width="88"></div>
+                        <span class="progress-text">88%</span>
+                    </div>
+                    <div class="skill-tags mt-4">
                         <span>Data Analysis</span>
                         <span>Critical Thinking</span>
                         <span>Reporting</span>
                     </div>
                 </div>
-                
-                <!-- Skill Card 5 -->
-                <div class="skill-card" data-aos="zoom-in" data-aos-delay="500">
-                    <div class="skill-icon indigo">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3 class="skill-title">Cross-Cultural Communication</h3>
-                    <p class="skill-description">Bridging cultural gaps with effective communication strategies and cultural intelligence.</p>
-                    <div class="skill-progress">
-                        <div class="progress-bar indigo" data-width="94">
-                            <span class="progress-text">94%</span>
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-users text-3xl text-indigo-400 mr-4"></i>
+                        <div>
+                            <h3 class="font-bold text-xl">Cross-Cultural Communication</h3>
+                            <p class="text-sm text-gray-400">Bridging cultural gaps with effective communication strategies and cultural intelligence.</p>
                         </div>
                     </div>
-                    <div class="skill-tags">
+                    <div class="progress-container">
+                        <div class="progress-bar indigo" data-width="94"></div>
+                        <span class="progress-text">94%</span>
+                    </div>
+                    <div class="skill-tags mt-4">
                         <span>Cultural Intelligence</span>
                         <span>Public Relations</span>
                         <span>Team Collaboration</span>
                     </div>
                 </div>
-                
-                <!-- Skill Card 6 -->
-                <div class="skill-card" data-aos="zoom-in" data-aos-delay="600">
-                    <div class="skill-icon yellow">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
-                    <h3 class="skill-title">Digital Proficiency</h3>
-                    <p class="skill-description">Advanced proficiency in digital tools, collaboration platforms, and emerging technologies.</p>
-                    <div class="skill-progress">
-                        <div class="progress-bar yellow" data-width="87">
-                            <span class="progress-text">87%</span>
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-laptop-code text-3xl text-rose-400 mr-4"></i>
+                        <div>
+                            <h3 class="font-bold text-xl">Digital Proficiency</h3>
+                            <p class="text-sm text-gray-400">Advanced proficiency in digital tools, collaboration platforms, and emerging technologies.</p>
                         </div>
                     </div>
-                    <div class="skill-tags">
+                    <div class="progress-container">
+                        <div class="progress-bar rose" data-width="87"></div>
+                        <span class="progress-text">87%</span>
+                    </div>
+                    <div class="skill-tags mt-4">
                         <span>Microsoft Office</span>
                         <span>Google Workspace</span>
                         <span>Digital Tools</span>
@@ -548,26 +465,27 @@
     </section>
 
     <!-- Languages Section -->
-    <section id="languages" class="py-20 relative">
-        <div class="container mx-auto px-6" data-aos="fade-up">
+    <section id="languages" class="py-20 px-4 relative">
+        <div class="container mx-auto">
             <div class="text-center mb-16">
-                <h2 class="section-title">Language Proficiency</h2>
-                <p class="section-subtitle">Multilingual expertise enabling cross-cultural communication</p>
+                <div class="section-icon-wrapper inline-block mb-6">
+                    <i class="section-icon fas fa-globe"></i>
+                </div>
+                <h2 class="section-title" data-aos="fade-up">Language Proficiency</h2>
+                <p class="section-subtitle max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">Multilingual expertise enabling cross-cultural communication</p>
             </div>
-            
-            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-16">
-                <div class="language-card" data-aos="flip-up" data-aos-delay="100">
-                    <div class="language-flag">🇬🇧</div>
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="language-card" data-aos="fade-up">
+                    <i class="language-flag em em-gb"></i>
                     <h3 class="language-name">English</h3>
                     <p class="language-level">C2 - Proficient</p>
                     <div class="language-progress">
-                        <div class="language-bar blue" data-width="98"></div>
+                        <div class="language-bar blue" data-width="100"></div>
                     </div>
                     <p class="language-description">Professional working proficiency with advanced writing and communication skills</p>
                 </div>
-                
-                <div class="language-card" data-aos="flip-up" data-aos-delay="200">
-                    <div class="language-flag">🇹🇿</div>
+                <div class="language-card" data-aos="fade-up" data-aos-delay="100">
+                    <i class="language-flag em em-tz"></i>
                     <h3 class="language-name">Kiswahili</h3>
                     <p class="language-level">Native Speaker</p>
                     <div class="language-progress">
@@ -575,9 +493,8 @@
                     </div>
                     <p class="language-description">Native fluency with deep cultural understanding and literary appreciation</p>
                 </div>
-                
-                <div class="language-card" data-aos="flip-up" data-aos-delay="300">
-                    <div class="language-flag">🇰🇪</div>
+                <div class="language-card" data-aos="fade-up" data-aos-delay="200">
+                    <i class="language-flag em em-ke"></i>
                     <h3 class="language-name">Kikuyu</h3>
                     <p class="language-level">Native Speaker</p>
                     <div class="language-progress">
@@ -586,10 +503,8 @@
                     <p class="language-description">Mother tongue with expertise in traditional expressions and modern contexts</p>
                 </div>
             </div>
-            
-            <!-- Language Services -->
-            <div class="text-center" data-aos="fade-up" data-aos-delay="400">
-                <h3 class="text-2xl font-bold mb-8 text-slate-300">Translation Services Available</h3>
+            <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                <h3 class="text-2xl font-bold mb-6">Translation Services Available</h3>
                 <div class="flex flex-wrap justify-center gap-4">
                     <span class="service-tag">English ↔ Swahili</span>
                     <span class="service-tag">English ↔ Kikuyu</span>
@@ -602,119 +517,69 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-slate-800/30 relative">
-        <div class="container mx-auto px-6" data-aos="fade-up">
+    <section id="contact" class="py-20 px-4 bg-gray-800 relative">
+        <div class="container mx-auto">
             <div class="text-center mb-16">
-                <h2 class="section-title">Let's Connect</h2>
-                <p class="section-subtitle">Ready to collaborate on your next project? Get in touch</p>
+                <div class="section-icon-wrapper inline-block mb-6">
+                    <i class="section-icon fas fa-envelope"></i>
+                </div>
+                <h2 class="section-title" data-aos="fade-up">Let's Connect</h2>
+                <p class="section-subtitle max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">Ready to collaborate on your next project? Get in touch</p>
             </div>
-            
-            <div class="grid lg:grid-cols-2 gap-16 max-w-6xl mx-auto">
-                <!-- Contact Info -->
-                <div class="space-y-8">
-                    <div class="contact-intro">
-                        <h3 class="text-3xl font-bold mb-6 text-white">Ready to Collaborate?</h3>
-                        <p class="text-lg text-slate-300 mb-8 leading-relaxed">
-                            I'm always excited to discuss new opportunities, whether it's content creation, 
-                            AI training, translation services, or innovative cross-cultural projects. 
-                            Let's create something amazing together!
-                        </p>
-                    </div>
-                    
-                    <!-- Contact Methods -->
+            <div class="grid md:grid-cols-2 gap-12">
+                <div data-aos="fade-up">
+                    <h3 class="text-2xl font-bold mb-8">Ready to Collaborate?</h3>
+                    <p class="text-lg leading-relaxed mb-8">I'm always excited to discuss new opportunities, whether it's content creation, AI training, translation services, or innovative cross-cultural projects. Let's create something amazing together!</p>
                     <div class="space-y-6">
-                        <div class="contact-item" data-aos="slide-right" data-aos-delay="100">
-                            <div class="contact-icon blue">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
+                        <div class="contact-item">
+                            <div class="contact-icon blue"><i class="fas fa-map-marker-alt"></i></div>
                             <div>
-                                <h4 class="font-semibold text-lg text-white mb-1">Location</h4>
-                                <p class="text-slate-400">Kiambu County, Kenya</p>
+                                <h4 class="font-bold">Location</h4>
+                                <p class="text-gray-400">Kiambu County, Kenya</p>
                             </div>
                         </div>
-                        
-                        <div class="contact-item" data-aos="slide-right" data-aos-delay="200">
-                            <div class="contact-icon purple">
-                                <i class="fas fa-envelope"></i>
-                            </div>
+                        <div class="contact-item">
+                            <div class="contact-icon purple"><i class="fas fa-envelope"></i></div>
                             <div>
-                                <h4 class="font-semibold text-lg text-white mb-1">Email</h4>
-                                <a href="mailto:mathumoses@yahoo.com" class="text-slate-400 hover:text-purple-400 transition-colors duration-300 text-lg">
-                                    mathumoses@yahoo.com
-                                </a>
+                                <h4 class="font-bold">Email</h4>
+                                <p class="text-gray-400">mathumoses@yahoo.com</p>
                             </div>
                         </div>
-                        
-                        <div class="contact-item" data-aos="slide-right" data-aos-delay="300">
-                            <div class="contact-icon emerald">
-                                <i class="fas fa-phone"></i>
-                            </div>
+                        <div class="contact-item">
+                            <div class="contact-icon emerald"><i class="fas fa-phone"></i></div>
                             <div>
-                                <h4 class="font-semibold text-lg text-white mb-1">Phone</h4>
-                                <a href="tel:+254704787573" class="text-slate-400 hover:text-emerald-400 transition-colors duration-300 text-lg">
-                                    +254 704 787 573
-                                </a>
+                                <h4 class="font-bold">Phone</h4>
+                                <p class="text-gray-400">+254 704 787 573</p>
                             </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Social Links -->
-                    <div class="pt-8 border-t border-slate-700">
-                        <h4 class="font-semibold text-white text-xl mb-6">Connect Online</h4>
-                        <div class="flex space-x-4">
-                            <a href="https://linkedin.com/in/mathusays10" target="_blank" class="social-link linkedin" rel="noopener">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                            <a href="https://mmathu.substack.com" target="_blank" class="social-link substack" rel="noopener">
-                                <i class="fas fa-blog"></i>
-                            </a>
-                            <a href="mailto:mathumoses@yahoo.com" class="social-link email">
-                                <i class="fas fa-envelope"></i>
-                            </a>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Professional References -->
-                <div>
-                    <h3 class="text-3xl font-bold mb-8 text-white">Professional References</h3>
-                    <div class="space-y-6">
-                        <div class="reference-card" data-aos="fade-up" data-aos-delay="100">
-                            <h5 class="font-bold text-xl text-blue-400 mb-2">Steve Kamau</h5>
-                            <p class="text-slate-300 mb-2 font-medium">Director, Education Is Power (EIP)</p>
-                            <div class="text-slate-400 space-y-1">
-                                <p><i class="fas fa-phone mr-2"></i>+254 723 749 498</p>
-                                <p><i class="fas fa-envelope mr-2"></i>kamaukenvo@yahoo.com</p>
-                            </div>
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-2xl font-bold mb-8">Connect Online</h3>
+                    <div class="flex justify-center space-x-6 mb-8">
+                        <a href="#" class="social-link linkedin"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link substack"><i class="fas fa-blog"></i></a>
+                        <a href="#" class="social-link email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                    <h4 class="text-xl font-bold mb-6 text-center">Professional References</h4>
+                    <div class="space-y-4">
+                        <div class="reference-card">
+                            <h5 class="font-bold">Steve Kamau</h5>
+                            <p class="text-gray-400">Director, Education Is Power (EIP)</p>
+                            <p class="text-sm"><i class="fas fa-phone mr-2"></i>+254 723 749 498 | <i class="fas fa-envelope mr-2"></i>kamaukenvo@yahoo.com</p>
                         </div>
-                        
-                        <div class="reference-card" data-aos="fade-up" data-aos-delay="200">
-                            <h5 class="font-bold text-xl text-purple-400 mb-2">George Tharao</h5>
-                            <p class="text-slate-300 mb-2 font-medium">Supervisor, Lari ICT Hub</p>
-                            <div class="text-slate-400">
-                                <p><i class="fas fa-phone mr-2"></i>+254 724 801 822</p>
-                            </div>
+                        <div class="reference-card">
+                            <h5 class="font-bold">George Tharao</h5>
+                            <p class="text-gray-400">Supervisor, Lari ICT Hub</p>
+                            <p class="text-sm"><i class="fas fa-phone"></i>+254 724 801 822</p>
                         </div>
-                        
-                        <!-- Publications -->
-                        <div class="mt-12">
-                            <h4 class="text-2xl font-bold mb-6 text-white">Featured Publication</h4>
-                            <div class="publication-card" data-aos="zoom-in">
-                                <div class="publication-content">
-                                    <h5 class="publication-title">Evolution of the African Voter</h5>
-                                    <p class="publication-description">
-                                        A comprehensive analysis of democratic participation and political consciousness 
-                                        across African nations, exploring traditional values and modern governance.
-                                    </p>
-                                    <div class="publication-meta">
-                                        <span class="publication-platform">Personal Blog - Substack</span>
-                                        <a href="https://mmathu.substack.com" target="_blank" class="publication-link" rel="noopener">
-                                            <i class="fas fa-external-link-alt mr-2"></i>
-                                            Read on Substack
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
+                    </div>
+                    <div class="publication-card mt-8" data-aos="zoom-in">
+                        <h4 class="publication-title">Evolution of the African Voter</h4>
+                        <p class="publication-description">A comprehensive analysis of democratic participation and political consciousness across African nations, exploring traditional values and modern governance.</p>
+                        <div class="publication-meta">
+                            <span class="publication-platform">Personal Blog - Substack</span>
+                            <a href="#" class="publication-link"><i class="fas fa-external-link-alt mr-2"></i>Read on Substack</a>
                         </div>
                     </div>
                 </div>
@@ -723,74 +588,47 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 py-12 relative overflow-hidden">
-        <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.03"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-50"></div>
-        
-        <div class="container mx-auto px-6 relative z-10">
-            <div class="grid md:grid-cols-3 gap-8 mb-8">
-                <!-- Brand -->
-                <div class="text-center md:text-left">
-                    <h3 class="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent mb-4">
-                        Moses Kamanu Mathu
-                    </h3>
-                    <p class="text-slate-400 mb-6 leading-relaxed">
-                        Bridging cultures through language, technology, and innovation.
-                    </p>
-                    <div class="flex justify-center md:justify-start space-x-4">
-                        <a href="https://linkedin.com/in/mathusays10" target="_blank" class="footer-social" rel="noopener">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="https://mmathu.substack.com" target="_blank" class="footer-social" rel="noopener">
-                            <i class="fas fa-blog"></i>
-                        </a>
-                        <a href="mailto:mathumoses@yahoo.com" class="footer-social">
-                            <i class="fas fa-envelope"></i>
-                        </a>
+    <footer class="py-12 px-4 bg-gray-900 border-t border-gray-700">
+        <div class="container mx-auto text-center">
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="#" class="footer-social"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="footer-social"><i class="fas fa-blog"></i></a>
+                <a href="#" class="footer-social"><i class="fas fa-envelope"></i></a>
+            </div>
+            <div class="space-y-4 mb-8">
+                <div class="grid md:grid-cols-2 gap-8 text-sm">
+                    <div>
+                        <h4 class="font-bold mb-2">Quick Links</h4>
+                        <div class="space-y-1">
+                            <a href="#about" class="footer-link block">About</a>
+                            <a href="#experience" class="footer-link block">Experience</a>
+                            <a href="#skills" class="footer-link block">Skills</a>
+                            <a href="#contact" class="footer-link block">Contact</a>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-bold mb-2">Services</h4>
+                        <div class="space-y-1">
+                            <a href="#" class="footer-link block">Content Writing</a>
+                            <a href="#" class="footer-link block">Translation</a>
+                            <a href="#" class="footer-link block">AI Training</a>
+                            <a href="#" class="footer-link block">Cultural Consulting</a>
+                        </div>
                     </div>
                 </div>
-                
-                <!-- Quick Links -->
-                <div class="text-center">
-                    <h4 class="font-semibold text-white text-lg mb-4">Quick Links</h4>
-                    <ul class="space-y-3">
-                        <li><a href="#about" class="footer-link">About</a></li>
-                        <li><a href="#experience" class="footer-link">Experience</a></li>
-                        <li><a href="#skills" class="footer-link">Skills</a></li>
-                        <li><a href="#contact" class="footer-link">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <!-- Services -->
-                <div class="text-center md:text-right">
-                    <h4 class="font-semibold text-white text-lg mb-4">Services</h4>
-                    <ul class="space-y-3">
-                        <li><span class="footer-service">Content Writing</span></li>
-                        <li><span class="footer-service">Translation</span></li>
-                        <li><span class="footer-service">AI Training</span></li>
-                        <li><span class="footer-service">Cultural Consulting</span></li>
-                    </ul>
-                </div>
             </div>
-            
-            <div class="border-t border-slate-700 pt-8 text-center">
-                <p class="text-slate-400">
-                    &copy; 2025 Moses Kamanu Mathu. All rights reserved. 
-                    <span class="text-slate-500 mx-2">|</span>
-                    Built with passion and cutting-edge web technologies
-                </p>
-            </div>
+            <p class="text-gray-500">&copy; 2025 Moses Kamanu Mathu. All rights reserved. | Built with passion and cutting-edge web technologies</p>
         </div>
     </footer>
 
     <!-- Back to Top Button -->
-    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+    <button id="back-to-top" class="back-to-top">
         <i class="fas fa-chevron-up"></i>
     </button>
 
-    <!-- Scripts -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
